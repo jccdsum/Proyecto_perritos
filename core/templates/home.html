@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina con datos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="mb-3">
+            <h1>Listado de Vehículos en Base de Datos</h1>
+            <hr>
+            <div class="row">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">PATENTE</th>
+                            <th scope="col">MARCA</th>
+                            <th scope="col">MODELO</th>
+                            <th scope="col">OPCIONES</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for ve in vehiculos %}
+                        <tr>
+                            <td>{{ve.patente}}</td>
+                            <td>{{ve.marca}}</td>
+                            <td>{{ve.modelo}}</td>
+                            <td>
+                                <a class="btn btn-success" href="{% url 'form_mod_vehiculo' ve.patente %}" role="link">Modificar</a>
+                                <a class="btn btn-danger" href="{% url 'form_del_vehiculo' ve.patente %}" role="link">Eliminar</a>
+                            </td>
+                        
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <br><br>
+            </div>
+            <div class="row mb-3">
+                <a class="btn btn-primary" href="{% url 'form_vehiculo'%}" role="link">Nuevo Vehiculo</a>
+            </div>
+            
+        </div>
+    </div>
+    
+    <script src="{% static '/js/main.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Bootstrap 4, from LayoutIt!</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  </head>
+  <body>
+
+
+ 	
+    <div class="container">
+
+	<!-- Encabezado -->
+	<div class="row">
+		<div class="col-md-12">
+			<h3 class="text-center">
+				Adopta una Mascota
+			</h3>
+		</div>
+	</div>
+	
+	<!-- Menu nav -->
+	<div class="row">
+		<div class="col-md-12">
+			<ul class="nav">
+				<li class="nav-item">
+					<a class="nav-link active" href="{% url 'index' %}" role="link">Inicio</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="{% url 'form-contacto' %}" role="link">Adoptar</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="{% url 'index' %}">Volver</a>
+				</li>
+				<!-- <li class="nav-item dropdown ml-md-auto">
+					 <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">Menu</a>
+					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+						 <a class="dropdown-item" href="#">Iniciar sesion</a> <a class="dropdown-item" href="#">Cerrar sesion</a>
+					</div>
+				</li> -->
+			</ul>
+		</div>
+	</div>
+
+
+    <!-- menu Gatos -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <img alt="Bootstrap Image Preview" src="{% static 'img/Gato-Tonkinés.jpeg' %}" width="300px" />
+                <h3>
+                    Gusgus
+                </h3> 
+                <a class="btn btn-primary" href="{% url 'Gusgus' %}" role="button">Ver Info</a>
+            </div>
+            <div class="col-md-6">
+                <img alt="Bootstrap Image Preview" src="{% static 'img/estrella.jpg' %}" width="350px" />
+                <h3>
+                    Estrella
+                </h3> 
+				<a class="btn btn-primary" href="{% url 'estrella' %}" role="button">Ver Info</a>
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <img alt="Bootstrap Image Preview" src="{% static 'img/pelusa.jpg'%}" width="350px
+				" />
+                <h3>
+                    Pelusa
+                </h3> 
+                <a class="btn btn-primary" href="{% url 'pelusa' %}" role="button">Ver Info</a>
+                
+            </div>
+            <div class="col-md-6">
+                <img alt="Bootstrap Image Preview" src="{% static 'img/princesa.jpg' %}" width="300px" />
+                <h3>
+                    Princesa
+                </h3> 
+                <a class="btn btn-primary" href="{% url 'princesa' %}" role="button">Ver Info</a>
+                
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <div class="PiePag">
+		<div class="row">
+			<div class="col-md-6">
+				<h3>
+					Contactos
+				</h3>
+				<dl>
+					<h4 style="font-size: 18px;">+569 46509803</h4>
+					<h4 style="font-size: 18px;">+569 50615407</h4>
+					
+				</dl>
+			</div>
+			<div class="col-md-6">
+				<h3>
+					Direccion
+				</h3>
+				<dl>
+					<h4 style="font-size: 18px;">Av. Américo Vespucio 1501, Cerrillos, Región Metropolitana</h4>
+					
+				</dl>
+			</div>
+		</div>
+	</div>
